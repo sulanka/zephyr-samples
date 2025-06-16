@@ -1,0 +1,20 @@
+/ {
+	aliases {
+        ledred = &led_red;
+	};
+};
+
+/ {
+	leds {
+		compatible = "gpio-leds";
+
+		led_red: led-red {
+			gpios = <&gpio0 16 GPIO_ACTIVE_LOW>; /* GPIO 16 */
+			label = "REDLED";
+		};
+	};
+};
+
+&gpio0 {
+	status = "okay";
+};

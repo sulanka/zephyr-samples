@@ -6,6 +6,7 @@ tests:
       - LED
       - gpio
     filter: dt_enabled_alias_with_parent_compat("led0", "gpio-leds")
+    filter: dt_enabled_alias_with_parent_compat("ledred", "gpio-leds")
     depends_on: gpio
     harness: led
     integration_platforms:
